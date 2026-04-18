@@ -1,4 +1,4 @@
-import '../data/models/photo_model.dart';
+import '../../data/models/photo_model.dart';
 
 abstract class PhotoState {}
 

@@ -3,7 +3,7 @@ import 'package:hive/hive.dart';
 import 'photo_event.dart';
 import 'photo_state.dart';
 import '../../data/models/photo_model.dart';
-import '../../../../core/storage/hive_boxes.dart';
+import '../../../core/storage/hive_boxes.dart';
 
 abstract class PhotoEvent {}
 class LoadPhotos extends PhotoEvent {}

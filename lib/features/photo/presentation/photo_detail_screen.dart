@@ -6,9 +6,9 @@ import 'package:iconsax/iconsax.dart';
 import 'package:hive/hive.dart';
 import '../bloc/photo_bloc.dart';
 import '../data/models/photo_model.dart';
-import '../../../../core/storage/hive_boxes.dart';
-import '../../../../core/constants/app_colors.dart';
-import '../../../../core/constants/app_text_styles.dart';
+import '../../../core/storage/hive_boxes.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_text_styles.dart';
 
 class PhotoDetailScreen extends StatelessWidget {
   final String photoId;
