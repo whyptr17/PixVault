@@ -122,9 +122,19 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                _SocialButton(icon: Icons.g_mobiledata),
+                                _SocialButton(
+                                  icon: Icons.g_mobiledata,
+                                  onTap: () => context.read<AuthCubit>().signInWithGoogle(),
+                                ),
                                 const SizedBox(width: AppSpacing.lg),
-                                _SocialButton(icon: Icons.apple),
+                                _SocialButton(
+                                  icon: Icons.apple,
+                                  onTap: () {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(content: Text('Apple Sign-In not implemented yet.')),
+                                    );
+                                  },
+                                ),
                               ],
                             ),
                           ],
@@ -163,7 +173,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
           label: 'Login',
           isLoading: state is AuthLoading,
           onTap: () => context.read<AuthCubit>().login(
-            _emailController.text,
+            _emailController.text.trim(),
             _passwordController.text,
           ),
         ),
@@ -197,9 +207,11 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
         AppButton(
           label: 'Create Account',
           isLoading: state is AuthLoading,
-          onTap: () {
-            // Register logic
-          },
+          onTap: () => context.read<AuthCubit>().register(
+            _nameController.text.trim(),
+            _emailController.text.trim(),
+            _passwordController.text,
+          ),
         ),
       ],
     );
@@ -208,19 +220,23 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
 
 class _SocialButton extends StatelessWidget {
   final IconData icon;
-  const _SocialButton({required this.icon});
+  final VoidCallback onTap;
+  const _SocialButton({required this.icon, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(
-        color: AppColors.bgSecondary,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppColors.divider, width: 1),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          color: AppColors.bgSecondary,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: AppColors.divider, width: 1),
+        ),
+        child: Icon(icon, color: Colors.white, size: 24),
       ),
-      child: Icon(icon, color: Colors.white, size: 24),
     );
   }
 }
