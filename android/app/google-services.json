@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "971902571526",
+    "project_id": "gallery-8bb0d",
+    "storage_bucket": "gallery-8bb0d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971902571526:android:a7a35e997aef92a09c1f87",
+        "android_client_info": {
+          "package_name": "com.example.pixvault"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAhN1ytNvyoDwfTZQ-SUdTaVVbWhNWfQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
