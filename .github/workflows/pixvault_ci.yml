@@ -39,8 +39,13 @@ jobs:
 
       - name: "Print SHA-1 Fingerprint (for Firebase)"
         run: |
-          chmod +x android/gradlew
-          cd android && ./gradlew signingReport
+          mkdir -p /home/runner/.config/.android
+          if [ ! -f /home/runner/.config/.android/debug.keystore ]; then
+              keytool -genkey -v -keystore /home/runner/.config/.android/debug.keystore -storepass android -keypass android -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+          fi
+          cd android
+          chmod +x gradlew
+          ./gradlew signingReport
 
       - name: Build APK
         run: flutter build apk --release --dart-define=IMGBB_API_KEY=${{ secrets.IMGBB_API_KEY }} --no-tree-shake-icons
