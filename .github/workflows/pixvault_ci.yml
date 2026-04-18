@@ -32,8 +32,8 @@ jobs:
         run: |
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "ndk;27.0.12077973"
 
-      - name: "Debug: List Files"
-        run: ls -R
+      - name: "Debug: Locate gradlew"
+        run: find . -name gradlew
 
       - name: "Print SHA-1 Fingerprint (for Firebase)"
         run: |
