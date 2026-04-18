@@ -102,7 +102,7 @@ class _NavItem extends StatelessWidget {
               height: 4,
               decoration: const BoxDecoration(
                 color: AppColors.accentPrimary,
-                shape: BoxType.circle,
+                shape: BoxShape.circle,
               ),
             ),
         ],
@@ -127,7 +127,7 @@ class _UploadFAB extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
-            shape: BoxType.circle,
+            shape: BoxShape.circle,
             boxShadow: [
               BoxShadow(
                 color: AppColors.accentPrimary.withOpacity(0.3),

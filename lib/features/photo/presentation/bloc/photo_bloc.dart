@@ -3,12 +3,7 @@ import 'package:hive/hive.dart';
 import 'photo_event.dart';
 import 'photo_state.dart';
 import '../../data/models/photo_model.dart';
-import '../../../core/storage/hive_boxes.dart';
-
-abstract class PhotoEvent {}
-class LoadPhotos extends PhotoEvent {}
-class ToggleFavorite extends PhotoEvent { final String id; ToggleFavorite(this.id); }
-class DeletePhoto extends PhotoEvent { final String id; DeletePhoto(this.id); }
+import '../../../../core/storage/hive_boxes.dart';
 
 class PhotoBloc extends Bloc<PhotoEvent, PhotoState> {
   final Box<PhotoModel> _photoBox = Hive.box<PhotoModel>(HiveBoxes.photos);

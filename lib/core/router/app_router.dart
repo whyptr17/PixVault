@@ -19,6 +19,9 @@ import '../../features/upload/presentation/upload_screen.dart';
 
 // Screens to be implemented
 class RegisterScreen extends StatelessWidget { @override Widget build(BuildContext context) => Scaffold(body: Center(child: Text('Register'))); }
+class AlbumsScreen extends StatelessWidget { @override Widget build(BuildContext context) => Scaffold(body: Center(child: Text('Albums'))); }
+class FavoritesScreen extends StatelessWidget { @override Widget build(BuildContext context) => Scaffold(body: Center(child: Text('Favorites'))); }
+class ProfileScreen extends StatelessWidget { @override Widget build(BuildContext context) => Scaffold(body: Center(child: Text('Profile'))); }
 class AlbumDetailScreen extends StatelessWidget { final String albumId; AlbumDetailScreen({required this.albumId}); @override Widget build(BuildContext context) => Scaffold(body: Center(child: Text('Album Detail'))); }
 class SearchScreen extends StatelessWidget { @override Widget build(BuildContext context) => Scaffold(body: Center(child: Text('Search'))); }
 class NotificationsScreen extends StatelessWidget { @override Widget build(BuildContext context) => Scaffold(body: Center(child: Text('Notifications'))); }

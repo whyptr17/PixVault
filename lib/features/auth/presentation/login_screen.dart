@@ -122,9 +122,9 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                _SocialButton(icon: Iconsax.google),
+                                _SocialButton(icon: Icons.g_mobiledata),
                                 const SizedBox(width: AppSpacing.lg),
-                                _SocialButton(icon: Iconsax.apple),
+                                _SocialButton(icon: Icons.apple),
                               ],
                             ),
                           ],

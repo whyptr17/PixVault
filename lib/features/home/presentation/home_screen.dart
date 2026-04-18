@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                shape: BoxType.circle,
+                shape: BoxShape.circle,
                 border: Border.all(color: AppColors.accentPrimary, width: 2),
               ),
               child: const CircleAvatar(
