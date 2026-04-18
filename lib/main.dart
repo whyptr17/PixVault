@@ -12,6 +12,8 @@ import 'features/photo/data/models/photo_model.dart';
 import 'features/album/data/models/album_model.dart';
 import 'features/auth/presentation/cubit/auth_cubit.dart';
 import 'features/upload/presentation/cubit/upload_cubit.dart';
+import 'features/photo/presentation/bloc/photo_bloc.dart';
+import 'features/photo/presentation/bloc/photo_event.dart';
 
 import 'firebase_options.dart';
 

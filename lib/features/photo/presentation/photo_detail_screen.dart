@@ -4,7 +4,7 @@ import 'package:photo_view/photo_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:hive/hive.dart';
-import '../bloc/photo_bloc.dart';
+import 'bloc/photo_bloc.dart';
 import '../data/models/photo_model.dart';
 import '../../../core/storage/hive_boxes.dart';
 import '../../../core/constants/app_colors.dart';

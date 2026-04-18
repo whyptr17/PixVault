@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:go_router/go_router.dart';
-import '../bloc/photo_bloc.dart';
-import '../bloc/photo_state.dart';
-import '../bloc/photo_event.dart';
+import 'bloc/photo_bloc.dart';
+import 'bloc/photo_state.dart';
+import 'bloc/photo_event.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_radius.dart';
 
